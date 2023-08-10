@@ -9,12 +9,12 @@ public class Calculadora {
         Scanner entrada = new Scanner(System.in);
         int num1,num2,operacion,suma,resta,multiplicacion;
         double resultado = 0;
-      
+        int opcion;
         float division;
         double num3,num4;
         double resultadodos;
         
-        
+     while(opcion >= 1 && opcion <= 9){
      System.out.println("-------CALCULADORA DLEON------ ");
      System.out.println("MENU DE OPCIONES.");
      System.out.println("1.SUMA");
@@ -25,6 +25,7 @@ public class Calculadora {
      System.out.println("6.COSENO");
      System.out.println("7.TANGENTE");
      System.out.println("8.RAIZ ENESIMA");
+     System.out.println("9.IVA");
      System.out.print("Digite el numero de la operación a realizar: ");
      operacion = entrada.nextInt();
      
@@ -95,7 +96,8 @@ public class Calculadora {
             num3 = entrada.nextFloat();
             System.out.println("Digite indice de la raiz: ");
             num4 = entrada.nextDouble();
-            resultadodos = Math.pow(num3, 1.0 / num4);
+            resultadodos = Raiz.raiz(num3,num4);
+            
             System.out.print("La raiz es: "+resultadodos);
             break;    
         case 9:
@@ -104,8 +106,10 @@ public class Calculadora {
             num1 = entrada.nextInt();
             System.out.print("Digite el IVA a sacar: ");
             num2 = entrada.nextInt();
-            resultadodos =  Math.
-            System.out.print("");        
+             resultadodos = Iva.iva(num1,num2);
+            
+            System.out.print("El valor es: "+resultadodos);
+            
             break;
             
     
@@ -113,7 +117,7 @@ public class Calculadora {
     default: System.out.print("Error se equivoco de numero");
     break;
     }
-    
+     }
  
 }
       static class Suma {
@@ -156,6 +160,23 @@ public static double tangente(double valor1){
 return valor1;
 }
 }
+static class Raiz {
+public static double raiz(double valor1,double valor2){
+    valor1 = (double) Math.pow(valor1, 1.0 / valor2);
+           
+return valor1;
+}
+}
+static class Iva {
+public static double iva(double valor1,double valor2){
+    valor2 = ((valor1 * valor2)/100);
+          valor1 = (valor1+valor2);  
+return valor1;
+}
+}
+
+
+
 }
   
 
