@@ -13,7 +13,7 @@ public class Calculadora {
         float division;
         double num3,num4;
         double resultadodos;
-        
+        do{
      while(opcion >= 1 && opcion <= 9){
      System.out.println("-------CALCULADORA DLEON------ ");
      System.out.println("MENU DE OPCIONES.");
@@ -28,7 +28,7 @@ public class Calculadora {
      System.out.println("9.IVA");
      System.out.print("Digite el numero de la operación a realizar: ");
      operacion = entrada.nextInt();
-     
+     }
     switch(operacion){
         case 1: 
     System.out.println("SUMA");
@@ -117,7 +117,7 @@ public class Calculadora {
     default: System.out.print("Error se equivoco de numero");
     break;
     }
-     }
+        }while (opcion != 5); 
  
 }
       static class Suma {
