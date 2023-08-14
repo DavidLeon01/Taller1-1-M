@@ -7,15 +7,14 @@ public class Calculadora {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        int num1,num2,operacion,suma,resta,multiplicacion;
+        int num1,num2,operacion = 0,suma,resta,multiplicacion;
         double resultado = 0;
         int opcion;
         float division;
         double num3,num4;
         double resultadodos;
         do{
-     while(opcion >= 1 && opcion <= 9){
-     System.out.println("-------CALCULADORA DLEON------ ");
+             System.out.println("-------CALCULADORA DLEON------ ");
      System.out.println("MENU DE OPCIONES.");
      System.out.println("1.SUMA");
      System.out.println("2.RESTA");
@@ -26,9 +25,11 @@ public class Calculadora {
      System.out.println("7.TANGENTE");
      System.out.println("8.RAIZ ENESIMA");
      System.out.println("9.IVA");
+      System.out.println("10.Salir");
      System.out.print("Digite el numero de la operación a realizar: ");
      operacion = entrada.nextInt();
-     }
+    
+     
     switch(operacion){
         case 1: 
     System.out.println("SUMA");
@@ -37,7 +38,7 @@ public class Calculadora {
     System.out.print("Digite segundo numero: ");
     num2 = entrada.nextInt();
     resultado = Suma.suma(num1,num2);
-    System.out.print("La suma es: "+resultado);
+    System.out.println("La suma es: "+resultado);
     break;
     case 2: 
         System.out.println("RESTA");
@@ -46,7 +47,7 @@ public class Calculadora {
     System.out.print("Digite segundo numero: ");
     num2 = entrada.nextInt();
     resultado = Resta.resta(num1,num2);
-    System.out.print("La resta es: "+resultado);
+    System.out.println("La resta es: "+resultado);
     break;
     case 3:
         System.out.println("MULTIPLICACION");
@@ -55,7 +56,7 @@ public class Calculadora {
     System.out.print("Digite segundo numero: ");
     num2 = entrada.nextInt();
     resultado = Multiplicacion.multiplicacion(num1,num2);
-    System.out.print("La Multiplicacion es: "+resultado);
+    System.out.println("La Multiplicacion es: "+resultado);
     break;
     case 4:
         System.out.println("DIVISION");
@@ -64,7 +65,7 @@ public class Calculadora {
     System.out.print("Ingrese el divisor ");
     num2 = entrada.nextInt();
     resultado = Division.division(num1,num2);
-    System.out.print("La Division es: "+resultado);
+    System.out.println("La Division es: "+resultado);
     break;
     case 5:
         System.out.println("Seno");
@@ -72,7 +73,7 @@ public class Calculadora {
         num3 = entrada.nextDouble();
         num4 = Math.toRadians(num3);
     resultadodos = Seno.seno(num4);
-    System.out.print("El seno en radianes es:"+resultadodos);
+    System.out.println("El seno en radianes es:"+resultadodos);
     break;
     case 6:
         System.out.println("Coseno");
@@ -80,7 +81,7 @@ public class Calculadora {
         num3 = entrada.nextDouble();
         num4 = Math.toRadians(num3);
     resultadodos = Coseno.coseno(num4);
-    System.out.print("El coseno en radianes es:"+resultadodos);
+    System.out.println("El coseno en radianes es:"+resultadodos);
     break;
         case 7:
         System.out.println("Tangente");
@@ -88,7 +89,7 @@ public class Calculadora {
         num3 = entrada.nextDouble();
         num4 = Math.toRadians(num3);
     resultadodos = Tangente.tangente(num4);
-    System.out.print("La tangente en radianes es:"+resultadodos);
+    System.out.println("La tangente en radianes es:"+resultadodos);
     break;
         case 8:
             System.out.println("Raiz enesima");
@@ -98,7 +99,7 @@ public class Calculadora {
             num4 = entrada.nextDouble();
             resultadodos = Raiz.raiz(num3,num4);
             
-            System.out.print("La raiz es: "+resultadodos);
+            System.out.println("La raiz es: "+resultadodos);
             break;    
         case 9:
             System.out.print("IVA");
@@ -108,16 +109,18 @@ public class Calculadora {
             num2 = entrada.nextInt();
              resultadodos = Iva.iva(num1,num2);
             
-            System.out.print("El valor es: "+resultadodos);
+            System.out.println("El valor es: "+resultadodos);
             
             break;
-            
-    
+        case 10: 
+          
   
-    default: System.out.print("Error se equivoco de numero");
+    default: System.out.println("Error se equivoco de numero"
+            + "Vuelve a internarlo nuevamente");
     break;
     }
-        }while (opcion != 5); 
+    }while(operacion !=10);
+        
  
 }
       static class Suma {
