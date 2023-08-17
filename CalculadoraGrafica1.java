@@ -376,7 +376,12 @@ jLabel1.setText("");        // TODO add your handling code here:
              jLabel1.setText(Integer.toString(num1*num2));
              break;
              case "/":
+                 if(num2>0){
              jLabel1.setText(Integer.toString(num1/num2));
+                 }else{
+                   
+                 jLabel1.setText("Error"); 
+                 }
              break;
       }
     }//GEN-LAST:event_jButton13ActionPerformed
