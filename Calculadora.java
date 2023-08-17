@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Calculadora {
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws InterruptedException {
     Scanner entrada = new Scanner(System.in);
     int num1, num2, operacion = 0, suma, resta, multiplicacion;
     double resultado = 0;
@@ -36,6 +36,7 @@ public class Calculadora {
         num2 = entrada.nextInt();
         resultado = Suma.suma(num1, num2);
         System.out.println("La suma es: " + resultado);
+        Thread.sleep(5000);
         break;
       case 2:
         System.out.println("RESTA");
@@ -45,6 +46,7 @@ public class Calculadora {
         num2 = entrada.nextInt();
         resultado = Resta.resta(num1, num2);
         System.out.println("La resta es: " + resultado);
+        Thread.sleep(5000);
         break;
       case 3:
         System.out.println("MULTIPLICACION");
@@ -54,6 +56,7 @@ public class Calculadora {
         num2 = entrada.nextInt();
         resultado = Multiplicacion.multiplicacion(num1, num2);
         System.out.println("La Multiplicacion es: " + resultado);
+        Thread.sleep(5000);
         break;
       case 4:
         System.out.println("DIVISION");
@@ -63,6 +66,7 @@ public class Calculadora {
         num2 = entrada.nextInt();
         resultado = Division.division(num1, num2);
         System.out.println("La Division es: " + resultado);
+        Thread.sleep(5000);
         break;
       case 5:
         System.out.println("Seno");
@@ -71,6 +75,7 @@ public class Calculadora {
         num4 = Math.toRadians(num3);
         resultadodos = Seno.seno(num4);
         System.out.println("El seno en radianes es:" + resultadodos);
+        Thread.sleep(5000);
         break;
       case 6:
         System.out.println("Coseno");
@@ -79,6 +84,7 @@ public class Calculadora {
         num4 = Math.toRadians(num3);
         resultadodos = Coseno.coseno(num4);
         System.out.println("El coseno en radianes es:" + resultadodos);
+        Thread.sleep(5000);
         break;
       case 7:
         System.out.println("Tangente");
@@ -87,6 +93,7 @@ public class Calculadora {
         num4 = Math.toRadians(num3);
         resultadodos = Tangente.tangente(num4);
         System.out.println("La tangente en radianes es:" + resultadodos);
+        Thread.sleep(5000);
         break;
       case 8:
         System.out.println("Raiz enesima");
@@ -97,6 +104,7 @@ public class Calculadora {
         resultadodos = Raiz.raiz(num3, num4);
 
         System.out.println("La raiz es: " + resultadodos);
+        Thread.sleep(5000);
         break;
       case 9:
         System.out.println("IVA");
@@ -108,12 +116,12 @@ public class Calculadora {
         resultadodos = Iva.iva(num1, num2);
 
         System.out.println("El valor total con IVA incluido es de: " + resultadodos);
-
+        Thread.sleep(5000);
         break;
       case 10:
       default:
         System.out.println("Se ha finalizado el programa correctamente");
-
+        Thread.sleep(5000);
         break;
       }
     } while (operacion != 10);
