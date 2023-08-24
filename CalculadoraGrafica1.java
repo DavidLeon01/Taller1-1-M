@@ -416,7 +416,7 @@ jLabel1.setText("");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-jLabel1.setText(jLabel1.getText()+"-"); 
+
 num1=Integer.parseInt(jLabel1.getText());
 signo="-";  
 jLabel1.setText("");        // TODO add your handling code here:
