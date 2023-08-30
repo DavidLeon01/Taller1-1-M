@@ -159,7 +159,7 @@ String signo;
             }
         });
 
-        jButton13.setBackground(new java.awt.Color(204, 204, 255));
+        jButton13.setBackground(new java.awt.Color(255, 204, 204));
         jButton13.setText("=");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -516,6 +516,14 @@ jLabel1.setText("");        // TODO add your handling code here:
                  jLabel1.setText(total);
                  }
                  break;  
+                  case "?":
+                 if(signo.equals("?")){
+                 num4=Double.parseDouble(jLabel1.getText());
+                 resultado=num3+(num3*(num4/100));
+                 total=String.valueOf(resultado);
+                 jLabel1.setText(total);
+                 }
+                 break;  
       }
     }//GEN-LAST:event_jButton13ActionPerformed
 
@@ -556,7 +564,9 @@ signo="#";
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
-        // TODO add your handling code here:
+       num3=Double.parseDouble(jLabel1.getText());
+       signo="?";
+       jLabel1.setText("");
     }//GEN-LAST:event_jButton23ActionPerformed
 
     /**
